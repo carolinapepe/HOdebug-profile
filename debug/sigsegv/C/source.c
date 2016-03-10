@@ -30,7 +30,7 @@
 #ifdef __SMALL
 #define SIZE 100
 #else 
-#define SIZE 2500
+#define SIZE 25000
 #endif
 
 void mat_Tmat_mul( float * A, float * C ){
@@ -67,9 +67,9 @@ int main( int argc, char * argv[] ){
   
   mat_Tmat_mul( A, C );
   
-  free( A );
-  free( C );
-  
+//   free( A );
+//   free( C );
+//   
   return 0;
 }
   

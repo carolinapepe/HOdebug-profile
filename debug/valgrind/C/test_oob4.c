@@ -30,9 +30,12 @@ int main(int argc, char *argv[])
   for(i=0; i<last; i++)
     {
       mysub(&a, mydim);
+      if( i == last -1)
+	printf("a = %f \n", a[0]);
+    free(a);
     }
-
-  printf("a = %f \n", a[0]);
-
+/* por cada vez que llamo a malloc , libero la memoria correspondiente*/
+/* el print lo hago en el ultimo paso del for para seguir con la idea de quedarme
+ con el ultimo valor de a. */
   return(EXIT_SUCCESS);
 }

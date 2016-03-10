@@ -1,5 +1,6 @@
 #include <stdlib.h>
 #include <stdio.h>
+#include <math.h>
 #ifdef TRAPFPE
 #include "fpe_x87_sse.h"
 #endif
@@ -27,7 +28,7 @@ int main(int argc, char *argv[])
       c = -1.;
     }
 
-  printf("c = %f \n", tmp);
+  printf("c = %f \n", tmp);/* dice que muestra c pero muestra tmp!*/
   
   return(EXIT_SUCCESS);
 }
