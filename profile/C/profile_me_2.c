@@ -12,6 +12,13 @@ int main( int argc, char * argv[] )
   
   size_t dim;
   
+  /* Agrego chequeo de la cantidad de argumentos de entrada */
+  if (argc < 2)
+  {
+    printf("USO: profile_me_2 <dim>\n\n");
+    return EXIT_FAILURE;
+  }
+  
   dim = atoi(argv[1]);
  
   a = (double *) malloc( dim * sizeof( double ) );
@@ -25,10 +32,10 @@ int main( int argc, char * argv[] )
     c[i] = 3.0;
   }
 
-  for( i = 0; i < dim; i++ ){
-    
-    a[i] = exp( a[i] * i );
-  }
+//   for( i = 0; i < dim; i++ ){
+//     
+//     a[i] = exp( a[i] * i );
+//   }
 
   for( i = 0; i < dim; i++ ){
     
@@ -45,7 +52,7 @@ int main( int argc, char * argv[] )
     alpha += a[i] + b[i] + c[i];
   }
 
-  printf( "%g", alpha );
+  printf( "%g\n", alpha );
 
   free( a );
   free( b );

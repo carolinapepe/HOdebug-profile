@@ -1,7 +1,7 @@
 #include <stdlib.h>
 #include <math.h>
 
-#define SIZE 5000
+#define SIZE 12000
 
 void first_assign(int i1, int i2, double * a, double * b, double * c )
 {  
